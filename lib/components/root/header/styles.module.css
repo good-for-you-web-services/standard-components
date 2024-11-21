@@ -18,6 +18,4 @@
 	align-items: center;
 
 	height: 100%;
-	max-width: var(--header-max-width, var(--content-max-width, 80rem));
-	margin: 0 auto;
 }
