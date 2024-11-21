@@ -1,9 +1,8 @@
 .page-section {
-	padding-bottom: var(--section-gap, 4rem);
+	padding: 0 var(--page-padding, var(--content-padding, 1rem));
 }
 
 .wrapper {
 	max-width: var(--page-max-width, var(--content-max-width, 80rem));
 	margin: 0 auto;
-	padding: 0 var(--page-padding, var(--content-padding, 1rem));
 }
