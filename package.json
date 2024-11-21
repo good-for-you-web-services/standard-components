@@ -1,7 +1,17 @@
 {
-  "name": "standard-components",
+  "name": "@goodforyou/standard-components",
+  "description": "A set of standard react components",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/good-for-you-web-services/standard-components.git"
+  },
+  "homepage": "https://github.com/good-for-you-web-services/standard-components#readme",
+  "bugs": {
+    "url": "https://github.com/good-for-you-web-services/standard-components/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
@@ -9,7 +19,7 @@
     "dist"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -30,7 +40,7 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "glob": "^11.0.0",
     "globals": "^15.11.0",
-    "react-hook-form": "^7.53.2",
+    "modern-normalize": "^3.0.1",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.11.0",
     "vite": "^5.4.10",
@@ -39,5 +49,8 @@
   },
   "sideEffects": [
     "**/*.css"
-  ]
+  ],
+  "directories": {
+    "lib": "lib"
+  }
 }
