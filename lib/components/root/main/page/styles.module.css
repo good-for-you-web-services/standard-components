@@ -1,0 +1,9 @@
+.page {
+	min-height: 100vh;
+
+	padding-top: var(--header-height, 4rem);
+}
+
+.wrapper {
+	padding-top: var(--heading-gap, 2rem);
+}

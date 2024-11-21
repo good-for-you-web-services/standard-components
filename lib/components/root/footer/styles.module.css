@@ -1,0 +1,14 @@
+.footer {
+	height: var(--footer-height, 24px);
+	width: 100%;
+	padding: 0 var(--footer-padding, var(--content-padding, 1rem));
+
+	background-color: var(--footer-background-color, black);
+	color: var(--footer-text-color, white);
+}
+
+.wrapper {
+	height: 100%;
+	max-width: var(--footer-max-width, var(--content-max-width, 1280px));
+	margin: 0 auto;
+}
