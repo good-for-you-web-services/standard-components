@@ -1,8 +1,9 @@
-import type { BaseHTMLAttributes } from 'react';
+import type { HTMLAttributes } from 'react';
 import { Combine } from '../../../functions/combine';
+import { Wrapper } from '../../wrappers/wrapper';
 import styles from './styles.module.css';
 
-type Properties = {} & BaseHTMLAttributes<HTMLBaseElement>;
+interface Properties extends HTMLAttributes<HTMLBaseElement> {}
 
 export function Header(properties: Properties) {
 	const { children, className, ...otherProperties } = properties;
@@ -12,7 +13,7 @@ export function Header(properties: Properties) {
 			className={Combine(['standard-component', 'header', styles['header'], className])}
 			{...otherProperties}
 		>
-			<div className={Combine(['wrapper', styles['wrapper']])}>{children}</div>
+			<Wrapper className={styles['wrapper']}>{children}</Wrapper>
 		</header>
 	);
 }

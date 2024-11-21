@@ -9,6 +9,4 @@
 
 .wrapper {
 	height: 100%;
-	max-width: var(--footer-max-width, var(--content-max-width, 1280px));
-	margin: 0 auto;
 }

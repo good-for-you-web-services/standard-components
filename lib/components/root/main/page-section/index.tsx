@@ -1,8 +1,9 @@
-import type { BaseHTMLAttributes } from 'react';
+import type { HTMLAttributes } from 'react';
 import { Combine } from '../../../../functions/combine';
+import { Wrapper } from '../../../wrappers/wrapper';
 import styles from './styles.module.css';
 
-type Properties = {} & BaseHTMLAttributes<HTMLBaseElement>;
+interface Properties extends HTMLAttributes<HTMLBaseElement> {}
 
 export function PageSection(properties: Properties) {
 	const { children, className, ...otherProperties } = properties;
@@ -17,7 +18,7 @@ export function PageSection(properties: Properties) {
 			])}
 			{...otherProperties}
 		>
-			<div className={Combine(['wrapper', styles['wrapper']])}>{children}</div>
+			<Wrapper>{children}</Wrapper>
 		</section>
 	);
 }

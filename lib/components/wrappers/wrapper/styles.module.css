@@ -1,0 +1,8 @@
+.wrapper {
+	max-width: var(--content-max-width, 80rem);
+	margin: 0 auto;
+}
+
+.wrapper-full {
+	width: 100%;
+}
