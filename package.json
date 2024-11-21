@@ -1,7 +1,7 @@
 {
   "name": "@goodforyou/standard-components",
   "description": "A set of standard react components",
-  "private": true,
+  "private": false,
   "version": "0.1.0",
   "repository": {
     "type": "git",
