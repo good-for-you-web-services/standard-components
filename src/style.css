@@ -1,1 +1,38 @@
-@import '../lib/style/normalize.css';
+@import '../node_modules/modern-normalize/modern-normalize.css';
+
+/* Remove default margins */
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+	margin: 0;
+}
+
+/* Make images block level */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+	display: block;
+	vertical-align: middle;
+}
+
+/* Constrain images to parent width */
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
