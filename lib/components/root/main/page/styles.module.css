@@ -5,5 +5,5 @@
 }
 
 .wrapper {
-	padding-top: var(--heading-gap, 2rem);
+	padding-top: var(--header-gap, 2rem);
 }
