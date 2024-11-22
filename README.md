@@ -6,25 +6,25 @@ This is a growing set of standardized react components that can be used to quick
 
 ### Root Components
 
-##### Footer
+#### Footer
 
 `<footer>` element.
 
-##### Header
+#### Header
 
 `<header>` element.
 
-##### Page
+#### Page
 
 `<main>` element.
 
-##### PageSection
+#### PageSection
 
 `<section>` element.
 
 ### Wrapper Components
 
-##### Wrapper
+#### Wrapper
 
 `<div>` element.
 
@@ -38,67 +38,67 @@ Styling for these components is minimal handled by css modules, and can be exten
 
 ### CSS Variables
 
-##### content-padding
+#### content-padding
 
 > Fallback Value: none
 
 `--content-padding` is used as a general source to determine the horizontal padding that is applied to content. It is used by several other variables as a fallback.
 
-##### footer-background-color
+#### footer-background-color
 
 > Fallback Value: black
 
 `--footer-background-color` is used to determine the background color of the full width of the `Footer` component.
 
-##### footer-height
+#### footer-height
 
 > Fallback Value: 1.5rem
 
 `--footer-height` is used to determine the height of the `Footer` component.
 
-##### footer-padding
+#### footer-padding
 
 > Fallback Value: --content-padding, 1rem
 
 `--footer-padding` is used to determine the horizontal padding applied to the `Footer` component in order to prevent content going to the edge of the screen on small devices.
 
-##### footer-text-color
+#### footer-text-color
 
 > Fallback Value: white
 
 `--footer-text-color` is used to determine the color of text within the `Footer` component.
 
-##### header-background-color
+#### header-background-color
 
 > Fallback Value: black
 
 `--header-background-color` is used to determine the background color of the full width of the `Header` component.
 
-##### header-gap
+#### header-gap
 
 > Fallback Value: 2rem
 
 `--header-gap` is used to add additional padding at the top of the `Page` component to add space between the `Header` component and the start of `Page` content
 
-##### header-height
+#### header-height
 
 > Fallback Value: 4rem
 
 `--header-height` is used to determine the height of the header component. Additionally, this variable is used to add padding at the top of the Page component to prevent content being covered up by the header.
 
-##### header-padding
+#### header-padding
 
 > Fallback Value: --content-padding, 1rem
 
 `--header-padding` is used to determine the horizontal padding applied to the `Header` component in order to prevent content going to the edge of the screen on small devices.
 
-##### header-text-color
+#### header-text-color
 
 > Fallback Value: white
 
 `--header-text-color` is used to determine the color of text within the `Header` component.
 
-##### page-section-padding
+#### page-section-padding
 
 > Fallback Value: --content-padding, 1rem
 
