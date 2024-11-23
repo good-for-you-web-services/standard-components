@@ -1,0 +1,15 @@
+@use '../../../styles/mixins/buttons';
+
+.anchor-button {
+	text-decoration: none;
+
+	@include buttons.button-base;
+
+	&.solid {
+		@include buttons.button-solid;
+	}
+
+	&.outline {
+		@include buttons.button-outline;
+	}
+}

@@ -1,5 +1,11 @@
-import { ButtonGroup } from '../../../lib/components/buttons/button-group';
-import { Button, Page, PageSection, RadioButton } from '../../../lib/main';
+import {
+	AnchorButton,
+	Button,
+	ButtonGroup,
+	Page,
+	PageSection,
+	RadioButton,
+} from '../../../lib/main';
 import styles from './styles.module.scss';
 
 export default function Test() {
@@ -26,6 +32,18 @@ export default function Test() {
 							<RadioButton name='radio-group-2'>2</RadioButton>
 							<RadioButton name='radio-group-2'>3</RadioButton>
 						</ButtonGroup>
+					</div>
+					<div className={styles['buttons-section']}>
+						<AnchorButton href='https://google.com' target='_blank'>
+							Anchor Button
+						</AnchorButton>
+						<AnchorButton
+							appearance='outline'
+							href='https://google.com'
+							target='_blank'
+						>
+							Anchor Button
+						</AnchorButton>
 					</div>
 				</div>
 			</PageSection>
