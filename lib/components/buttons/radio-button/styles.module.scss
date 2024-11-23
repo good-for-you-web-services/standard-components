@@ -12,8 +12,9 @@
 	}
 
 	&:has(input:checked) {
-		background-color: var(--button-color-checked, grey);
-		color: var(--button-text-color-checked, black);
+		border-color: var(--button-color-checked, black);
+		background-color: var(--button-color-checked, black);
+		color: var(--button-text-color-checked, white);
 	}
 }
 
