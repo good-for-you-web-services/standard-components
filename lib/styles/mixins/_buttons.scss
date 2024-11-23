@@ -30,7 +30,7 @@
 
 	&:hover {
 		background-color: var(--button-color-hover, black);
-		color: var(--button-text-color-active, white);
+		color: var(--button-text-color-hover, white);
 	}
 
 	&:active {
