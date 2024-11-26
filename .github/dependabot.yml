@@ -9,3 +9,14 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+      day: "monday"
+      time: "00:00"
+      timezone: "America/Los_Angeles"
+    groups:
+      security-updates:
+        applies-to: "security-updates"
+      patch-and-minor-updates:
+        applies-to: "version-updates"
+        update-types:
+          - "patch"
+          - "minor"
