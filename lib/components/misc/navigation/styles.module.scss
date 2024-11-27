@@ -1,5 +1,7 @@
 .navigation {
 	.navigation-button {
+		display: var(--navigation-button-display, inherit);
+
 		padding: 0.25rem;
 
 		border: 0.125rem solid transparent;
@@ -30,20 +32,18 @@
 	}
 
 	.navigation-menu {
-		// display: none;
-
-		position: absolute;
+		position: var(--navigation-menu-position, absolute);
 		top: var(--header-height, 4rem);
 		right: 0;
 		overflow: hidden;
 
-		height: 100vh;
-		width: 100%;
-		max-width: 0;
+		height: var(--navigation-menu-height, 100vh);
+		width: var(--navigation-menu-width, 100%);
+		max-width: var(--navigation-menu-max-width, 0);
 
-		background-color: var(--navigation-menu-color, grey);
+		background-color: var(--navigation-menu-color, black);
 
-		transition: max-width var(--menu-transition-time, 0.25s) ease-in-out;
+		transition: max-width var(--navigation-menu-transition-time, 0.25s) ease-in-out;
 
 		&[data-show='true'] {
 			// display: inherit;
@@ -52,17 +52,18 @@
 
 		.navigation-list {
 			display: flex;
-			flex-flow: column nowrap;
-			align-items: flex-end;
+			flex-flow: var(--navigation-list-flex-flow, column nowrap);
+			align-items: var(--navigation-list-flex-align, flex-end);
 			gap: 1rem;
 
 			margin: 0;
-			padding: var(--navigation-padding-vertical, 2rem)
-				var(--navigation-padding-horizontal, 1rem);
+			padding: var(--navigation-list-padding, 2rem 1rem);
 
 			list-style: none;
 
 			.navigation-list-item {
+				line-height: 2rem;
+
 				&,
 				& > * {
 					font-size: var(--navigation-menu-font-size, 1.25rem);
@@ -74,16 +75,27 @@
 
 				&:hover,
 				&:hover > * {
-					color: var(--navigation-menu-font-color-hover, black);
+					color: var(--navigation-menu-font-color-hover, grey);
 				}
 
 				&:active,
 				&[data-status='active'],
 				&:active > *,
 				&[data-status='active'] > * {
-					color: var(--navigation-menu-font-color-active, black);
+					color: var(--navigation-menu-font-color-active, grey);
 				}
 			}
 		}
 	}
+
+	// @media (min-width: 1024px) {
+	// 	--navigation-button-display: none;
+	// 	--navigation-menu-position: static;
+	// 	--navigation-menu-height: auto;
+	// 	--navigation-menu-width: auto;
+	// 	--navigation-menu-max-width: none;
+	// 	--navigation-menu-color: transparent;
+	// 	--navigation-list-flex-flow: row nowrap;
+	// 	--navigation-list-padding: 0;
+	// }
 }
