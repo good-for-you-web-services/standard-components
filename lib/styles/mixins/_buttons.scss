@@ -1,0 +1,58 @@
+@mixin button-base {
+	display: block;
+	white-space: nowrap;
+	align-content: center;
+
+	width: fit-content;
+
+	font-family: var(--button-font-family);
+	line-height: 1;
+
+	padding: var(--button-padding-vertical, 0.5rem) var(--button-padding-horizontal, 1rem);
+
+	border-radius: var(--button-border-radius, 00.5rem);
+
+	cursor: pointer;
+
+	transition: background-color var(--button-transition-time, 0.1s) ease-in-out,
+		color var(--button-transition-time, 0.1s) ease-in-out,
+		border var(--button-transition-time, 0.1s) ease-in-out;
+
+	&:active {
+		transition: none;
+	}
+}
+
+@mixin button-solid {
+	border: none;
+	background-color: var(--button-color, grey);
+	color: var(--button-text-color, black);
+
+	&:hover {
+		background-color: var(--button-color-hover, black);
+		color: var(--button-text-color-hover, white);
+	}
+
+	&:active {
+		background-color: var(--button-color-active, dimgrey);
+		color: var(--button-text-color-active, white);
+	}
+}
+
+@mixin button-outline {
+	border: var(--button-border-width, 0.125rem) solid var(--button-border-color, dimgrey);
+	background-color: var(--button-color, transparent);
+	color: var(--button-text-color, black);
+
+	&:hover {
+		border-color: var(--button-border-color-hover, black);
+		background-color: var(--button-color-hover, black);
+		color: var(--button-text-color-hover, white);
+	}
+
+	&:active {
+		border-color: var(--button-border-color-active, dimgrey);
+		background-color: var(--button-color-active, dimgrey);
+		color: var(--button-text-color-active, white);
+	}
+}

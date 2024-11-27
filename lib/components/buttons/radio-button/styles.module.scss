@@ -1,0 +1,23 @@
+@use '../../../styles/mixins/buttons';
+
+.radio-button {
+	@include buttons.button-base;
+
+	&.solid {
+		@include buttons.button-solid;
+	}
+
+	&.outline {
+		@include buttons.button-outline;
+	}
+
+	&:has(input:checked) {
+		border-color: var(--button-color-checked, black);
+		background-color: var(--button-color-checked, black);
+		color: var(--button-text-color-checked, white);
+	}
+}
+
+.radio-button-input {
+	display: none;
+}
