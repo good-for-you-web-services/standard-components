@@ -1,6 +1,6 @@
 import type { HTMLAttributes } from 'react';
 import { Combine } from '../../../functions/combine';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 interface Properties extends HTMLAttributes<HTMLDivElement> {
 	fullWidth?: boolean;
