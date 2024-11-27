@@ -1,6 +1,6 @@
 import react from '@vitejs/plugin-react';
 import { glob } from 'glob';
-import { extname, relative, resolve } from 'node:path';
+import path, { extname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
@@ -27,7 +27,17 @@ export default defineConfig({
 					])
 			),
 			output: {
-				assetFileNames: 'assets/[name][extname]',
+				assetFileNames: (info) => {
+					if (info.originalFileNames) {
+						const desiredOutputPath = info.originalFileNames[0]
+							.replace(/^lib\//, '')
+							.replace(/index.tsx$/, '');
+						console.log(desiredOutputPath);
+						return path.join(desiredOutputPath, 'styles[extname]');
+					}
+
+					return 'assets/[name][extname]';
+				},
 				entryFileNames: '[name].js',
 			},
 		},
