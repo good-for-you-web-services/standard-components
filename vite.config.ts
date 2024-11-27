@@ -8,14 +8,6 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [
-		dts({
-			include: ['lib'],
-			tsconfigPath: resolve(__dirname, 'tsconfig.lib.json'),
-		}),
-		libInjectCss(),
-		react(),
-	],
 	build: {
 		copyPublicDir: false,
 		lib: {
@@ -40,4 +32,19 @@ export default defineConfig({
 			},
 		},
 	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				api: 'modern-compiler',
+			},
+		},
+	},
+	plugins: [
+		dts({
+			include: ['lib'],
+			tsconfigPath: resolve(__dirname, 'tsconfig.lib.json'),
+		}),
+		libInjectCss(),
+		react(),
+	],
 });
