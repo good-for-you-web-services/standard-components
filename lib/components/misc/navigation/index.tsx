@@ -1,12 +1,28 @@
+import { useMediaQuery } from '@uidotdev/usehooks';
 import ListIcon from 'bootstrap-icons/icons/list.svg?react';
-import { Children, useState, type HTMLAttributes } from 'react';
+import { Children, useEffect, useState, type HTMLAttributes } from 'react';
 import { Combine } from '../../../functions/combine';
 import styles from './styles.module.scss';
 
-interface Properties extends HTMLAttributes<HTMLElement> {}
+interface Properties extends HTMLAttributes<HTMLElement> {
+	alternateLayoutBreakpoint?: string;
+}
 
-export default function Naviation({ children, className, ...properties }: Properties) {
+export default function Navigation({
+	alternateLayoutBreakpoint = '1024px',
+	children,
+	className,
+	...properties
+}: Properties) {
 	const [showMenu, setShowMenu] = useState(false);
+
+	const isAlternateLayout = useMediaQuery(
+		`only screen and (min-width: ${alternateLayoutBreakpoint})`
+	);
+
+	useEffect(() => {
+		console.log(isAlternateLayout);
+	}, [isAlternateLayout]);
 
 	const onNavigationButtonClick = () => {
 		const newShowMenu = !showMenu;
@@ -21,7 +37,9 @@ export default function Naviation({ children, className, ...properties }: Proper
 			className={Combine([
 				'standard-component',
 				'navigation',
+				!isAlternateLayout ? 'navigation-standard' : 'navigation-alternate',
 				styles['navigation'],
+				styles[!isAlternateLayout ? 'navigation-standard' : 'navigation-alternate'],
 				className,
 			])}
 			{...properties}
