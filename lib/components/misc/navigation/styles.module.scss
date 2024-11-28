@@ -1,7 +1,5 @@
 .navigation {
 	.navigation-button {
-		display: var(--navigation-button-display, inherit);
-
 		padding: 0.25rem;
 
 		border: 0.125rem solid transparent;
@@ -26,19 +24,52 @@
 			background-color: var(--navigation-button-color, white);
 
 			svg {
-				fill: var(--navigation-button-color-hover, black);
+				fill: var(--navigation-button-color-active, black);
 			}
 		}
 	}
 
 	.navigation-menu {
-		position: var(--navigation-menu-position, absolute);
+		.navigation-list {
+			display: flex;
+			gap: 1rem;
+
+			margin: 0;
+			list-style: none;
+
+			.navigation-list-item {
+				a {
+					white-space: nowrap;
+
+					font-size: var(--navigation-menu-font-size, 1.25rem);
+					font-weight: var(--navigation-menu-font-weight, 600);
+					text-decoration: none;
+
+					color: var(--navigation-menu-font-color, white);
+				}
+
+				a:hover {
+					color: var(--navigation-menu-font-color-hover, grey);
+				}
+
+				a:active,
+				a[data-status='active'] {
+					color: var(--navigation-menu-font-color-active, grey);
+				}
+			}
+		}
+	}
+}
+
+.navigation-standard {
+	.navigation-menu {
+		position: absolute;
 		top: var(--header-height, 4rem);
 		right: 0;
 		overflow: hidden;
 
-		height: var(--navigation-menu-height, 100vh);
-		width: var(--navigation-menu-width, 100%);
+		height: 100vh;
+		width: 100%;
 		max-width: var(--navigation-menu-max-width, 0);
 
 		background-color: var(--navigation-menu-color, black);
@@ -50,40 +81,22 @@
 		}
 
 		.navigation-list {
-			display: flex;
-			flex-flow: var(--navigation-list-flex-flow, column nowrap);
-			align-items: var(--navigation-list-flex-align, flex-end);
-			gap: 1rem;
+			flex-flow: column nowrap;
+			align-items: flex-end;
 
-			margin: 0;
 			padding: var(--navigation-list-padding, 2rem 1rem);
+		}
+	}
+}
 
-			list-style: none;
+.navigation-alternate {
+	.navigation-button {
+		display: none;
+	}
 
-			.navigation-list-item {
-				line-height: 2rem;
-
-				&,
-				& > * {
-					font-size: var(--navigation-menu-font-size, 1.25rem);
-					font-weight: var(--navigation-menu-font-weight, 600);
-					text-decoration: none;
-
-					color: var(--navigation-menu-font-color, white);
-				}
-
-				&:hover,
-				&:hover > * {
-					color: var(--navigation-menu-font-color-hover, grey);
-				}
-
-				&:active,
-				&[data-status='active'],
-				&:active > *,
-				&[data-status='active'] > * {
-					color: var(--navigation-menu-font-color-active, grey);
-				}
-			}
+	.navigation-menu {
+		.navigation-list {
+			flex-flow: row nowrap;
 		}
 	}
 }
