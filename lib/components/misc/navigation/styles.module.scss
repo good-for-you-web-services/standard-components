@@ -46,8 +46,7 @@
 		transition: max-width var(--navigation-menu-transition-time, 0.25s) ease-in-out;
 
 		&[data-show='true'] {
-			// display: inherit;
-			max-width: 100%;
+			max-width: var(--navigation-max-width, 100%);
 		}
 
 		.navigation-list {
@@ -88,14 +87,14 @@
 		}
 	}
 
-	// @media (min-width: 1024px) {
-	// 	--navigation-button-display: none;
-	// 	--navigation-menu-position: static;
-	// 	--navigation-menu-height: auto;
-	// 	--navigation-menu-width: auto;
-	// 	--navigation-menu-max-width: none;
-	// 	--navigation-menu-color: transparent;
-	// 	--navigation-list-flex-flow: row nowrap;
-	// 	--navigation-list-padding: 0;
-	// }
+	@media (min-width: 1024px) {
+		--navigation-button-display: none;
+		--navigation-menu-position: static;
+		--navigation-menu-height: auto;
+		--navigation-menu-width: auto;
+		--navigation-menu-max-width: none;
+		--navigation-menu-color: transparent;
+		--navigation-list-flex-flow: row nowrap;
+		--navigation-list-padding: 0;
+	}
 }
