@@ -32,7 +32,7 @@ export function HeroSection({
 		>
 			<Wrapper>
 				{heading}
-				<div className={styles['hero-children']}>{children}</div>
+				<div className='section-content'>{children}</div>
 			</Wrapper>
 		</section>
 	);

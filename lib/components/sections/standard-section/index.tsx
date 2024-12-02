@@ -1,24 +1,28 @@
-import type { HTMLAttributes } from 'react';
+import type { HTMLAttributes, ReactElement } from 'react';
 import { Combine } from '../../../functions/combine';
 import { Wrapper } from '../../wrappers/wrapper';
 import styles from './styles.module.scss';
 
-interface Properties extends HTMLAttributes<HTMLBaseElement> {}
+interface Properties extends HTMLAttributes<HTMLBaseElement> {
+	heading?: ReactElement;
+}
 
-export function StandardSection(properties: Properties) {
-	const { children, className, ...otherProperties } = properties;
-
+export function StandardSection({ children, className, heading, ...properties }: Properties) {
 	return (
 		<section
 			className={Combine([
 				'standard-component',
+				'section',
 				'standard-section',
 				styles['standard-section'],
 				className,
 			])}
-			{...otherProperties}
+			{...properties}
 		>
-			<Wrapper>{children}</Wrapper>
+			<Wrapper>
+				{heading}
+				<div className='section-content'>{children}</div>
+			</Wrapper>
 		</section>
 	);
 }
