@@ -18,9 +18,9 @@ export function AnchorButton({
 				'standard-component',
 				'anchor-button',
 				styles['anchor-button'],
-				styles[appearance],
 				className,
 			])}
+			data-appearance={appearance}
 			{...properties}
 		>
 			{children}

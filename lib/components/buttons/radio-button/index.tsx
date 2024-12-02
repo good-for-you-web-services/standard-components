@@ -6,26 +6,30 @@ interface Properties extends InputHTMLAttributes<HTMLInputElement> {
 	appearance?: 'solid' | 'outline';
 }
 
-export function RadioButton({ appearance = 'solid', ...properties }: Properties) {
-	const { children, className, id, ...otherProperties } = properties;
-
+export function RadioButton({
+	children,
+	className,
+	id,
+	appearance = 'solid',
+	...properties
+}: Properties) {
 	return (
 		<label
+			htmlFor={id}
 			className={Combine([
 				'standard-component',
 				'radio-button',
 				styles['radio-button'],
-				styles[appearance],
 				className,
 			])}
-			htmlFor={id}
+			data-appearance={appearance}
 		>
 			{children}
 			<input
 				type='radio'
 				className={Combine(['radio-button-input', styles['radio-button-input']])}
 				id={id}
-				{...otherProperties}
+				{...properties}
 			/>
 		</label>
 	);

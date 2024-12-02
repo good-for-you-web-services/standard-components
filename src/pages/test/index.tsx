@@ -1,22 +1,22 @@
 import {
 	AnchorButton,
-	Button,
 	ButtonGroup,
 	Page,
-	PageSection,
 	RadioButton,
+	StandardButton,
+	StandardSection,
 } from '../../../lib/main';
 import styles from './styles.module.scss';
 
 export default function Test() {
 	return (
 		<Page>
-			<PageSection>
+			<StandardSection>
 				<h1 className={styles['heading']}>Buttons</h1>
 				<div className={styles['buttons-section']}>
 					<div className={styles['buttons-section']}>
-						<Button>Button 1</Button>
-						<Button appearance='outline'>Button 2</Button>
+						<StandardButton>Button 1</StandardButton>
+						<StandardButton appearance='outline'>Button 2</StandardButton>
 					</div>
 					<div className={styles['buttons-section']}>
 						<RadioButton name='radio-group-one'>Radio Button 1</RadioButton>
@@ -46,7 +46,7 @@ export default function Test() {
 						</AnchorButton>
 					</div>
 				</div>
-			</PageSection>
+			</StandardSection>
 		</Page>
 	);
 }
