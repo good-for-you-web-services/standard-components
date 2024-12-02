@@ -1,0 +1,20 @@
+.hero-section {
+	padding: 0 var(--page-section-padding, var(--content-padding, 1rem));
+
+	.hero-children {
+		display: grid;
+		gap: var(--hero-gap, 1rem);
+	}
+
+	&[data-layout='narrow'] {
+		.hero-children {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&[data-layout='wide'] {
+		.hero-children {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
