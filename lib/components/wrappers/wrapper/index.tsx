@@ -6,19 +6,12 @@ interface Properties extends HTMLAttributes<HTMLDivElement> {
 	fullWidth?: boolean;
 }
 
-export function Wrapper(properties: Properties) {
-	const { fullWidth, children, className, ...otherProperties } = properties;
-
+export function Wrapper({ fullWidth, children, className, ...properties }: Properties) {
 	return (
 		<div
-			className={Combine([
-				'standard-component',
-				'wrapper',
-				fullWidth ? 'full' : '',
-				styles[fullWidth ? 'wrapper-full' : 'wrapper'],
-				className,
-			])}
-			{...otherProperties}
+			className={Combine(['standard-component', 'wrapper', styles['wrapper'], className])}
+			data-full-width={fullWidth}
+			{...properties}
 		>
 			{children}
 		</div>

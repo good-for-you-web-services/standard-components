@@ -5,11 +5,11 @@
 
 	@include buttons.button-base;
 
-	&.solid {
+	&[data-appearance='solid'] {
 		@include buttons.button-solid;
 	}
 
-	&.outline {
+	&[data-appearance='outline'] {
 		@include buttons.button-outline;
 	}
 }

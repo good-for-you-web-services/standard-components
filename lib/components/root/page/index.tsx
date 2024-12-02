@@ -1,6 +1,6 @@
 import type { HTMLAttributes } from 'react';
-import { Combine } from '../../../../functions/combine';
-import { Wrapper } from '../../../wrappers/wrapper';
+import { Combine } from '../../../functions/combine';
+import { Wrapper } from '../../wrappers/wrapper';
 import styles from './styles.module.scss';
 
 interface Properties extends HTMLAttributes<HTMLBaseElement> {}

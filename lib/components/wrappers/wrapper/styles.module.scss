@@ -1,8 +1,11 @@
 .wrapper {
-	max-width: var(--content-max-width, 80rem);
 	margin: 0 auto;
-}
 
-.wrapper-full {
-	width: 100%;
+	&:not([data-full-width]) {
+		max-width: var(--content-max-width, 80rem);
+	}
+
+	&[data-full-width] {
+		width: 100%;
+	}
 }

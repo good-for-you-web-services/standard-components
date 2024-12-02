@@ -6,13 +6,22 @@ interface Properties extends HTMLAttributes<HTMLButtonElement> {
 	appearance?: 'solid' | 'outline';
 }
 
-export function Button({ appearance = 'solid', ...properties }: Properties) {
-	const { children, className, ...otherProperties } = properties;
-
+export function StandardButton({
+	children,
+	className,
+	appearance = 'solid',
+	...properties
+}: Properties) {
 	return (
 		<button
-			className={Combine(['standard-input', 'button', styles['button'], styles[appearance]])}
-			{...otherProperties}
+			className={Combine([
+				'standard-input',
+				'standard-button',
+				styles['standard-button'],
+				className,
+			])}
+			data-appearance={appearance}
+			{...properties}
 		>
 			{children}
 		</button>

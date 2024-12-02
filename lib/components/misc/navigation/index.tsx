@@ -37,11 +37,10 @@ export default function Navigation({
 			className={Combine([
 				'standard-component',
 				'navigation',
-				!isAlternateLayout ? 'navigation-standard' : 'navigation-alternate',
 				styles['navigation'],
-				styles[!isAlternateLayout ? 'navigation-standard' : 'navigation-alternate'],
 				className,
 			])}
+			data-layout={!isAlternateLayout ? 'standard' : 'alternate'}
 			{...properties}
 		>
 			<button
