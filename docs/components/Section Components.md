@@ -1,4 +1,4 @@
-## Standard Section
+## StandardSection
 
 A `<section>` element.
 
@@ -22,7 +22,7 @@ Default `<section>` attributes.
 | ------------------- | --------------------------- | --------------------------- |
 | `--section-padding` | `--content-padding`, 0 1rem | Sets the `padding` property |
 
-## Hero Section
+## HeroSection
 
 A `<section>` element that displays content side by side with enough room.
 
