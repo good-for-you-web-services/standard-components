@@ -4,8 +4,8 @@ A `<footer>` element.
 
 #### Classes
 
--   `standard-component`
--   `footer`
+-   `standard-component`, `footer`
+    -   `wrapper`
 
 #### Attributes
 
@@ -26,8 +26,8 @@ A `<header>` element.
 
 #### Classes
 
--   `standard-component`
--   `header`
+-   `standard-component`, `header`
+    -   `wrapper`
 
 #### Attributes
 
@@ -48,8 +48,8 @@ A `<main>` element.
 
 #### Classes
 
--   `standard-component`
--   `page`
+-   `standard-component`, `page`
+    -   `wrapper`
 
 #### Attributes
 
