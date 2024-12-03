@@ -11,7 +11,7 @@
 ### Section Components
 
 -   [StandardSection](https://github.com/good-for-you-web-services/standard-components/wiki/Section-Components#standardsection)
--   [HeroSection](<(https://github.com/good-for-you-web-services/standard-components/wiki/Section-Components#herosection)>)
+-   [HeroSection](https://github.com/good-for-you-web-services/standard-components/wiki/Section-Components#herosection)
 
 ### Miscellaneous Components
 
