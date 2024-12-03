@@ -1,7 +1,7 @@
 .footer {
 	height: var(--footer-height, 1.5rem);
 	width: 100%;
-	padding: 0 var(--footer-padding, var(--content-padding, 1rem));
+	padding: var(--footer-padding, var(--content-padding, 0 1rem));
 	align-content: center;
 
 	background-color: var(--footer-background-color, black);
