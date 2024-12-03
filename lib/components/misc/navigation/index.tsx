@@ -1,28 +1,24 @@
 import { useMediaQuery } from '@uidotdev/usehooks';
 import ListIcon from 'bootstrap-icons/icons/list.svg?react';
-import { Children, useEffect, useState, type HTMLAttributes } from 'react';
+import { useState, type HTMLAttributes, type ReactElement } from 'react';
 import { Combine } from '../../../functions/combine';
 import styles from './styles.module.scss';
 
 interface Properties extends HTMLAttributes<HTMLElement> {
-	alternateLayoutBreakpoint?: string;
+	links: ReactElement[];
+	layoutBreakpoint?: string;
 }
 
 export default function Navigation({
-	alternateLayoutBreakpoint = '1024px',
+	links,
+	layoutBreakpoint = '1024px',
 	children,
 	className,
 	...properties
 }: Properties) {
 	const [showMenu, setShowMenu] = useState(false);
 
-	const isAlternateLayout = useMediaQuery(
-		`only screen and (min-width: ${alternateLayoutBreakpoint})`
-	);
-
-	useEffect(() => {
-		console.log(isAlternateLayout);
-	}, [isAlternateLayout]);
+	const isAlternateLayout = useMediaQuery(`only screen and (min-width: ${layoutBreakpoint})`);
 
 	const onNavigationButtonClick = () => {
 		const newShowMenu = !showMenu;
@@ -50,13 +46,18 @@ export default function Navigation({
 				<ListIcon />
 			</button>
 			<div className={`navigation-menu ${styles['navigation-menu']}`} data-show={showMenu}>
-				<ul className={`navigation-list ${styles['navigation-list']}`}>
-					{Children.map(children, (child) => (
-						<li className={`navigation-list-item ${styles['navigation-list-item']}`}>
-							{child}
-						</li>
-					))}
-				</ul>
+				<div className={`navigation-menu-wrapper ${styles['navigation-menu-wrapper']}`}>
+					<ul className={`navigation-list ${styles['navigation-list']}`}>
+						{links.map((child) => (
+							<li
+								className={`navigation-list-item ${styles['navigation-list-item']}`}
+							>
+								{child}
+							</li>
+						))}
+					</ul>
+					{children}
+				</div>
 			</div>
 		</nav>
 	);
