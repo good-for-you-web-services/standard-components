@@ -1,5 +1,5 @@
 .hero-section {
-	padding: 0 var(--page-section-padding, var(--content-padding, 1rem));
+	padding: var(--section-padding, var(--content-padding, 0 1rem));
 
 	:global(.section-content) {
 		display: grid;
