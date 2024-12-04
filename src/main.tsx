@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import Navigation from '../lib/components/misc/navigation';
+import { Navigation } from '../lib/components/misc/navigation';
 import { Footer } from '../lib/components/root/footer';
 import { Header } from '../lib/components/root/header';
 import { StandardButton } from '../lib/main';
