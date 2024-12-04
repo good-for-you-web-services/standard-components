@@ -9,7 +9,7 @@ interface Properties extends HTMLAttributes<HTMLElement> {
 	layoutBreakpoint?: string;
 }
 
-export default function Navigation({
+export function Navigation({
 	links,
 	layoutBreakpoint = '1024px',
 	children,
