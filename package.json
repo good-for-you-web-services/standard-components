@@ -2,7 +2,7 @@
   "name": "@goodforyou/standard-components",
   "description": "A set of standard react components",
   "private": false,
-  "version": "0.5.2",
+  "version": "0.5.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/good-for-you-web-services/standard-components.git"
@@ -27,8 +27,8 @@
   },
   "peerDependencies": {
     "@uidotdev/usehooks": "^2.4.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
@@ -46,7 +46,7 @@
     "sass": "^1.81.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.11.0",
-    "vite": "^5.4.10",
+    "vite": "^5.0.0 || ^6.0.0",
     "vite-plugin-dts": "^4.3.0",
     "vite-plugin-lib-inject-css": "^2.1.1",
     "vite-plugin-svgr": "^4.3.0"
