@@ -1,8 +1,8 @@
 ### Root Components
 
--   [Footer](https://github.com/good-for-you-web-services/standard-components/wiki/Root-Components#footer)
--   [Header](https://github.com/good-for-you-web-services/standard-components/wiki/Root-Components#header)
--   [Page](https://github.com/good-for-you-web-services/standard-components/wiki/Root-Components#page)
+-   [StandardFooter](https://github.com/good-for-you-web-services/standard-components/wiki/Root-Components#footer)
+-   [StandardHeader](https://github.com/good-for-you-web-services/standard-components/wiki/Root-Components#header)
+-   [StandardPage](https://github.com/good-for-you-web-services/standard-components/wiki/Root-Components#page)
 
 ### Section Components
 

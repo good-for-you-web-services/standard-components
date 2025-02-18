@@ -1,4 +1,4 @@
-## Footer
+## StandardFooter
 
 A `<footer>` element.
 
@@ -20,7 +20,7 @@ Default `<footer>` attributes.
 | `--footer-background-color` | black                     | Sets the `background-color` property |
 | `--footer-text-color`       | white                     | Sets the `color` property            |
 
-## Header
+## StandardHeader
 
 A `<header>` element.
 
@@ -42,7 +42,7 @@ Default `<header>` attributes.
 | `--header-background-color` | black                     | Sets the `background-color` property |
 | `--header-text-color`       | white                     | Sets the `color` property            |
 
-## Page
+## StandardPage
 
 A `<main>` element.
 
@@ -57,6 +57,7 @@ Default `<main>` attributes.
 
 | Attribute | Type           | Default | Description                                        |
 | --------- | -------------- | ------- | -------------------------------------------------- |
+| `meta`    | `object`       | null    | Sets `<head>` meta tags relevant to page seo       |
 | `heading` | `ReactElement` | null    | Renders the provided heading component if provided |
 
 #### CSS Variables
