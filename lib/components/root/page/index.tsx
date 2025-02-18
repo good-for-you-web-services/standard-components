@@ -1,10 +1,11 @@
 import type { HTMLAttributes, ReactElement } from 'react';
 import { Combine } from '../../../functions/combine';
+import { StandardSection } from '../../sections/standard-section';
 import { Wrapper } from '../../wrappers/wrapper';
 import styles from './styles.module.scss';
 
 interface Properties extends HTMLAttributes<HTMLBaseElement> {
-	heading?: ReactElement;
+	heading?: ReactElement<HTMLHeadingElement>;
 }
 
 export function Page(properties: Properties) {
@@ -16,7 +17,9 @@ export function Page(properties: Properties) {
 			{...otherProperties}
 		>
 			<Wrapper className={styles['wrapper']} fullWidth>
-				{heading}
+				{heading && (
+					<StandardSection className='heading-section'>{heading}</StandardSection>
+				)}
 				{children}
 			</Wrapper>
 		</main>
