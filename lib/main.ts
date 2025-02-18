@@ -1,7 +1,7 @@
 // Root Exports
 export { Footer } from './components/root/footer';
 export { Header } from './components/root/header';
-export { Page } from './components/root/page';
+export { StandardPage } from './components/root/page';
 
 // Section Exports
 export { HeroSection } from './components/sections/hero-section';
