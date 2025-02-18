@@ -2,16 +2,26 @@ import { HeroSection } from '../../../lib/components/sections/hero-section';
 import {
 	AnchorButton,
 	ButtonGroup,
-	Page,
 	RadioButton,
 	StandardButton,
+	StandardPage,
 	StandardSection,
 } from '../../../lib/main';
+import Icon from '../../../node_modules/bootstrap-icons/icons/globe.svg';
 import styles from './styles.module.scss';
 
 export default function Test() {
 	return (
-		<Page heading={<h1 className={styles['heading']}>This is a Page</h1>}>
+		<StandardPage
+			meta={{
+				sitename: 'Standard Components Test',
+				title: 'Test Page',
+				description: 'See how we build our websites with a set of standard components!',
+				url: 'https://localhost:5174',
+				image: Icon,
+			}}
+			heading={<h1 className={styles['heading']}>This is a Page</h1>}
+		>
 			<StandardSection
 				className={styles['section']}
 				heading={<h2 className={styles['heading']}>This is a Standard Section</h2>}
@@ -82,6 +92,6 @@ export default function Test() {
 					</AnchorButton>
 				</div>
 			</StandardSection>
-		</Page>
+		</StandardPage>
 	);
 }
