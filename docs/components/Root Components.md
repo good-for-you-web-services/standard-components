@@ -57,6 +57,7 @@ Default `<main>` attributes.
 
 | Attribute | Type           | Default | Description                                        |
 | --------- | -------------- | ------- | -------------------------------------------------- |
+| `meta`    | `object`       | null    | Sets `<head>` meta tags relevant to page seo       |
 | `heading` | `ReactElement` | null    | Renders the provided heading component if provided |
 
 #### CSS Variables
