@@ -29,7 +29,7 @@ export default defineConfig({
 			),
 			output: {
 				assetFileNames: (info) => {
-					if (info.originalFileNames) {
+					if (info.originalFileNames.length > 0) {
 						const desiredOutputPath = info.originalFileNames[0]
 							.replace(/^lib\//, '')
 							.replace(/index.tsx$/, '');
