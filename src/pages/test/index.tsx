@@ -11,10 +11,10 @@ import styles from './styles.module.scss';
 
 export default function Test() {
 	return (
-		<Page>
+		<Page heading={<h1 className={styles['heading']}>This is a Page</h1>}>
 			<StandardSection
 				className={styles['section']}
-				heading={<h1 className={styles['heading']}>This is a Standard Section</h1>}
+				heading={<h2 className={styles['heading']}>This is a Standard Section</h2>}
 			>
 				<div>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet est
@@ -35,7 +35,7 @@ export default function Test() {
 			</StandardSection>
 			<HeroSection
 				className={styles['section']}
-				heading={<h1 className={styles['heading']}>This is a Hero Section</h1>}
+				heading={<h2 className={styles['heading']}>This is a Hero Section</h2>}
 			>
 				<div>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet est
@@ -58,7 +58,7 @@ export default function Test() {
 			</HeroSection>
 			<StandardSection
 				className={styles['section']}
-				heading={<h1 className={styles['heading']}>Buttons</h1>}
+				heading={<h2 className={styles['heading']}>Buttons</h2>}
 			>
 				<div className={styles['buttons-section']}>
 					<StandardButton>Button 1</StandardButton>
