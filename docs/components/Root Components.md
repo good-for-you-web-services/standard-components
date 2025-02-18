@@ -61,7 +61,8 @@ Default `<main>` attributes.
 
 #### CSS Variables
 
-| Variable          | Fallback | Description                                             |
-| ----------------- | -------- | ------------------------------------------------------- |
-| `--header-height` | 4rem     | Sets the `padding-top` property on the main element.    |
-| `--header-gap`    | 2rem     | Sets the `padding-top` property on the wrapper element. |
+| Variable          | Fallback | Description                                                |
+| ----------------- | -------- | ---------------------------------------------------------- |
+| `--footer-gap`    | 4rem     | Sets the `padding-bottom` property on the wrapper element. |
+| `--header-height` | 4rem     | Sets the `padding-top` property on the main element.       |
+| `--header-gap`    | 2rem     | Sets the `padding-top` property on the wrapper element.    |
