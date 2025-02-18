@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 interface Properties extends HTMLAttributes<HTMLBaseElement> {}
 
-export function Footer(properties: Properties) {
+export function StandardFooter(properties: Properties) {
 	const { children, className, ...otherProperties } = properties;
 
 	return (

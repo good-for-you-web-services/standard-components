@@ -1,8 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Navigation } from '../lib/components/misc/navigation';
-import { Footer } from '../lib/components/root/footer';
-import { Header } from '../lib/components/root/header';
+import { StandardFooter } from '../lib/components/root/footer';
+import { StandardHeader } from '../lib/components/root/header';
 import { StandardButton } from '../lib/main';
 import Test from './pages/test';
 import './style.css';
@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
-		<Header>
+		<StandardHeader>
 			<h1>This is a header</h1>
 			<Navigation
 				links={[
@@ -24,10 +24,10 @@ createRoot(document.getElementById('root')!).render(
 					<StandardButton>Header Button</StandardButton>
 				</div>
 			</Navigation>
-		</Header>
+		</StandardHeader>
 		<Test />
-		<Footer>
+		<StandardFooter>
 			<p>This is a footer</p>
-		</Footer>
+		</StandardFooter>
 	</StrictMode>
 );

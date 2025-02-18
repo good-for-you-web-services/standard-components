@@ -1,11 +1,11 @@
 // Root Exports
-export { Footer } from './components/root/footer';
-export { Header } from './components/root/header';
+export { StandardFooter } from './components/root/footer';
+export { StandardHeader } from './components/root/header';
 export { StandardPage } from './components/root/page';
 
 // Section Exports
-export { HeroSection } from './components/sections/hero-section';
 export { StandardSection } from './components/sections/standard-section';
+export { HeroSection } from './components/sections/hero-section';
 
 // Misc Exports
 export { Navigation } from './components/misc/navigation';
