@@ -2,7 +2,7 @@
   "name": "@goodforyou/standard-components",
   "description": "A set of standard react components",
   "private": false,
-  "version": "0.5.6",
+  "version": "0.6.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/good-for-you-web-services/standard-components.git"
