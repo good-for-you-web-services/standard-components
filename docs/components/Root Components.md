@@ -1,4 +1,4 @@
-## Footer
+## StandardFooter
 
 A `<footer>` element.
 
@@ -20,7 +20,7 @@ Default `<footer>` attributes.
 | `--footer-background-color` | black                     | Sets the `background-color` property |
 | `--footer-text-color`       | white                     | Sets the `color` property            |
 
-## Header
+## StandardHeader
 
 A `<header>` element.
 
@@ -42,7 +42,7 @@ Default `<header>` attributes.
 | `--header-background-color` | black                     | Sets the `background-color` property |
 | `--header-text-color`       | white                     | Sets the `color` property            |
 
-## Page
+## StandardPage
 
 A `<main>` element.
 
