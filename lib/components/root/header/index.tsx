@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 interface Properties extends HTMLAttributes<HTMLBaseElement> {}
 
-export function Header(properties: Properties) {
+export function StandardHeader(properties: Properties) {
 	const { children, className, ...otherProperties } = properties;
 
 	return (
