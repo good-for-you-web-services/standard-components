@@ -33,7 +33,7 @@ export function StandardPage({
 		>
 			{meta && (
 				<Fragment>
-					{meta.title && <meta name='title' content={meta.title} />}
+					{meta.title && <title>{meta.title}</title>}
 					{meta.description && <meta name='description' content={meta.description} />}
 
 					{meta.sitename && <meta property='og:site_name' content={meta.sitename} />}
