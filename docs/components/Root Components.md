@@ -55,6 +55,10 @@ A `<main>` element.
 
 Default `<main>` attributes.
 
+| Attribute | Type           | Default | Description                                        |
+| --------- | -------------- | ------- | -------------------------------------------------- |
+| `heading` | `ReactElement` | null    | Renders the provided heading component if provided |
+
 #### CSS Variables
 
 | Variable          | Fallback | Description                                             |
