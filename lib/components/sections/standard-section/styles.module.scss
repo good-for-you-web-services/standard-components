@@ -1,3 +1,4 @@
 .standard-section {
 	padding: var(--section-padding, var(--content-padding, 0 1rem));
+	scroll-margin-top: var(--header-height);
 }
