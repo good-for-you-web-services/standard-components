@@ -14,12 +14,13 @@ interface Properties extends ImgHTMLAttributes<HTMLImageElement> {
 
 export function StandardImage({ className, src, options = {}, ...properties }: Properties) {
 	const { width, height, fit, position, format, quality = 90 } = options;
-
-	const imageURL = `/.netlify/images/?url=${src}&q=${quality}${width ? `&w=${width}` : ''}${
-		height ? `&h=${height}` : ''
-	}${fit ? `&fit=${fit}` : ''}${position ? `&postition=${position}` : ''}${
-		format ? `&fm=${format}` : ''
-	}`;
+	const imageURL =
+		`/.netlify/images/?url=${src}&q=${quality}` +
+		`${width ? `&w=${width}` : ''}` +
+		`${height ? `&h=${height}` : ''}` +
+		`${fit ? `&fit=${fit}` : ''}` +
+		`${position ? `&postition=${position}` : ''}` +
+		`${format ? `&fm=${format}` : ''}`;
 
 	return (
 		<img
