@@ -13,6 +13,7 @@ interface Properties extends ImgHTMLAttributes<HTMLImageElement> {
 }
 
 export function StandardImage({
+	className,
 	src,
 	options: { width, height, fit, position, format, quality = 90 },
 	...properties
@@ -23,5 +24,11 @@ export function StandardImage({
 		format ? `&fm=${format}` : ''
 	}`;
 
-	return <img src={import.meta.env.NETLIFY ? imageURL : src} {...properties} />;
+	return (
+		<img
+			className={`standard-component image ${className || ''}`}
+			src={import.meta.env.NETLIFY ? imageURL : src}
+			{...properties}
+		/>
+	);
 }
