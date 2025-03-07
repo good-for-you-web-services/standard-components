@@ -1,6 +1,6 @@
 import { Fragment, type HTMLAttributes, type ReactElement } from 'react';
 import { Combine } from '../../../functions/combine';
-import { StandardSection } from '../../sections/standard-section';
+import { StandardSection } from '../standard-section';
 import { Wrapper } from '../../wrappers/wrapper';
 import styles from './styles.module.scss';
 

@@ -1,8 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Navigation } from '../lib/components/misc/navigation';
-import { StandardFooter } from '../lib/components/root/footer';
-import { StandardHeader } from '../lib/components/root/header';
+import { StandardFooter } from '../lib/components/blocks/standard-footer';
+import { StandardHeader } from '../lib/components/blocks/standard-header';
 import { StandardButton } from '../lib/main';
 import Test from './pages/test';
 import './style.css';
