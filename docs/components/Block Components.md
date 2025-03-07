@@ -1,24 +1,6 @@
-## StandardFooter
+# Block Components
 
-A `<footer>` element.
-
-#### Classes
-
--   `standard-component`, `footer`
-    -   `wrapper`
-
-#### Attributes
-
-Default `<footer>` attributes.
-
-#### CSS Variables
-
-| Variable                    | Fallback                  | Description                          |
-| --------------------------- | ------------------------- | ------------------------------------ |
-| `--footer-height`           | 1.5rem                    | Sets the `height` property           |
-| `--footer-padding`          | `content-padding`, 0 1rem | Sets the `padding` property          |
-| `--footer-background-color` | black                     | Sets the `background-color` property |
-| `--footer-text-color`       | white                     | Sets the `color` property            |
+These components represent a set of standardized page building blocks.
 
 ## StandardHeader
 
@@ -67,3 +49,49 @@ Default `<main>` attributes.
 | `--footer-gap`    | 4rem     | Sets the `padding-bottom` property on the wrapper element. |
 | `--header-height` | 4rem     | Sets the `padding-top` property on the main element.       |
 | `--header-gap`    | 2rem     | Sets the `padding-top` property on the wrapper element.    |
+
+## StandardSection
+
+A `<section>` element.
+
+#### Classes
+
+-   `standard-component`, `section`, `standard-section`
+    -   `wrapper`
+        -   `section-content`
+
+#### Attributes
+
+Default `<section>` attributes.
+
+| Attribute | Type           | Default | Description                                        |
+| --------- | -------------- | ------- | -------------------------------------------------- |
+| `heading` | `ReactElement` | null    | Renders the provided heading component if provided |
+
+#### CSS Variables
+
+| Variable            | Fallback                    | Description                 |
+| ------------------- | --------------------------- | --------------------------- |
+| `--section-padding` | `--content-padding`, 0 1rem | Sets the `padding` property |
+
+## StandardFooter
+
+A `<footer>` element.
+
+#### Classes
+
+-   `standard-component`, `footer`
+    -   `wrapper`
+
+#### Attributes
+
+Default `<footer>` attributes.
+
+#### CSS Variables
+
+| Variable                    | Fallback                  | Description                          |
+| --------------------------- | ------------------------- | ------------------------------------ |
+| `--footer-height`           | 1.5rem                    | Sets the `height` property           |
+| `--footer-padding`          | `content-padding`, 0 1rem | Sets the `padding` property          |
+| `--footer-background-color` | black                     | Sets the `background-color` property |
+| `--footer-text-color`       | white                     | Sets the `color` property            |
