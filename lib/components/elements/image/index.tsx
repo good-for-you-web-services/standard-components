@@ -23,5 +23,5 @@ export function StandardImage({
 		format ? `&fm=${format}` : ''
 	}`;
 
-	return <img src={imageURL} {...properties} />;
+	return <img src={import.meta.env.NETLIFY ? imageURL : src} {...properties} />;
 }
