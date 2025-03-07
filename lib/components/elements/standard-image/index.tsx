@@ -2,7 +2,7 @@ import { ImgHTMLAttributes } from 'react';
 
 interface Properties extends ImgHTMLAttributes<HTMLImageElement> {
 	src: string;
-	options: {
+	options?: {
 		width?: number;
 		height?: number;
 		fit?: 'contain' | 'cover' | 'fill';
@@ -12,12 +12,9 @@ interface Properties extends ImgHTMLAttributes<HTMLImageElement> {
 	};
 }
 
-export function StandardImage({
-	className,
-	src,
-	options: { width, height, fit, position, format, quality = 90 },
-	...properties
-}: Properties) {
+export function StandardImage({ className, src, options = {}, ...properties }: Properties) {
+	const { width, height, fit, position, format, quality = 90 } = options;
+
 	const imageURL = `/.netlify/images/?url=${src}&q=${quality}${width ? `&w=${width}` : ''}${
 		height ? `&h=${height}` : ''
 	}${fit ? `&fit=${fit}` : ''}${position ? `&postition=${position}` : ''}${
