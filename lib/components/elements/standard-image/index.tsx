@@ -25,7 +25,7 @@ export function StandardImage({ className, src, options = {}, ...properties }: P
 	return (
 		<img
 			className={`standard-component image ${className || ''}`}
-			src={import.meta.env.NETLIFY ? imageURL : src}
+			src={process.env.NETLIFY ? imageURL : src}
 			{...properties}
 		/>
 	);
