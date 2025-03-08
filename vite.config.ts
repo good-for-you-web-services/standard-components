@@ -59,4 +59,7 @@ export default defineConfig({
 		react(),
 		svgr(),
 	],
+	define: {
+		'process.env.NETLIFY': 'import.meta.env.NETLIFY',
+	},
 });
