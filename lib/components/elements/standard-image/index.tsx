@@ -12,7 +12,13 @@ interface Properties extends ImgHTMLAttributes<HTMLImageElement> {
 	};
 }
 
-export function StandardImage({ className, src, options = {}, ...properties }: Properties) {
+export function StandardImage({
+	className,
+	src,
+	loading = 'lazy',
+	options = {},
+	...properties
+}: Properties) {
 	const { width, height, fit, position, format, quality = 90 } = options;
 	const imageURL =
 		`/.netlify/images/?url=${src}&q=${quality}` +
@@ -25,7 +31,8 @@ export function StandardImage({ className, src, options = {}, ...properties }: P
 	return (
 		<img
 			className={`standard-component image ${className || ''}`}
-			src={process.env.NETLIFY ? imageURL : src}
+			src={import.meta.env.NETLIFY ? imageURL : src}
+			loading={loading}
 			{...properties}
 		/>
 	);
