@@ -1,4 +1,5 @@
-import { ImgHTMLAttributes } from 'react';
+import { ImgHTMLAttributes, type CSSProperties } from 'react';
+import styles from './style.module.scss';
 
 interface Properties extends ImgHTMLAttributes<HTMLImageElement> {
 	src: string;
@@ -10,13 +11,15 @@ interface Properties extends ImgHTMLAttributes<HTMLImageElement> {
 		format?: 'avif' | 'jpg' | 'png' | 'webp' | 'gif' | 'blurhash';
 		quality?: number;
 	};
+	aspect?: number | 'none';
 }
 
 export function StandardImage({
-	className,
 	src,
-	loading = 'lazy',
 	options = {},
+	aspect = 'none',
+	className,
+	loading = 'lazy',
 	...properties
 }: Properties) {
 	const { width, height, fit, position, format, quality = 90 } = options;
@@ -30,9 +33,10 @@ export function StandardImage({
 
 	return (
 		<img
-			className={`standard-component image ${className || ''}`}
+			className={`standard-component image ${styles['image']} ${className || ''}`}
 			src={process.env.NETLIFY ? imageURL : src}
 			loading={loading}
+			style={{ '--aspect-ratio': aspect } as CSSProperties}
 			{...properties}
 		/>
 	);

@@ -1,0 +1,14 @@
+.image {
+	aspect-ratio: var(--aspect-ratio, none);
+
+	&::before {
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		text-align: center;
+		align-content: center;
+
+		background-color: hsla(0, 0%, 50%, 0.1);
+	}
+}
