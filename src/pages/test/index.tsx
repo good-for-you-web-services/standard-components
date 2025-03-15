@@ -1,4 +1,4 @@
-import { StandardPage, StandardSection } from '../../../lib/main';
+import { StandardImage, StandardPage, StandardSection } from '../../../lib/main';
 import Icon from '../../../node_modules/bootstrap-icons/icons/globe.svg';
 import styles from './styles.module.scss';
 
@@ -18,6 +18,12 @@ export default function Test() {
 				className={styles['section']}
 				heading={<h2 className={styles['heading']}>This is a Standard Section</h2>}
 			>
+				<StandardImage
+					src='https://goodforyou.services/images/mockups/mockup-wpl-light.png'
+					aspect={2043 / 1148}
+					width={512}
+					alt='Test Image'
+				/>
 				<div>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet est
 					turpis. Vestibulum quam ante, posuere at augue lacinia, sollicitudin vestibulum
