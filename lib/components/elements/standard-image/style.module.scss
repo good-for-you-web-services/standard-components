@@ -1,5 +1,6 @@
 .image {
 	aspect-ratio: var(--aspect-ratio, none);
+	overflow: hidden;
 
 	&::before {
 		display: block;
