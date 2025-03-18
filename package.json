@@ -55,5 +55,6 @@
   ],
   "directories": {
     "lib": "lib"
-  }
+  },
+  "packageManager": "pnpm@10.6.4"
 }
