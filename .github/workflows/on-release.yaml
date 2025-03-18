@@ -19,9 +19,9 @@ jobs:
           node-version: "22.x"
           registry-url: https://npm.pkg.github.com/
       - run: pnpm install
-      #   - run: pnpm version ${TAG_NAME} --no-git-tag-version
-      #     env:
-      #       TAG_NAME: ${{ github.event.release.tag_name }}
+      - run: pnpm version ${TAG_NAME} --no-git-tag-version
+        env:
+          TAG_NAME: ${{ github.event.release.tag_name }}
       - run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
