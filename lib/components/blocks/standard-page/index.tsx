@@ -1,7 +1,7 @@
 import { Fragment, type HTMLAttributes, type ReactElement } from 'react';
 import { Combine } from '../../../functions/combine';
-import { StandardSection } from '../standard-section';
 import { Wrapper } from '../../wrappers/wrapper';
+import { StandardSection } from '../standard-section';
 import styles from './styles.module.scss';
 
 interface Properties extends HTMLAttributes<HTMLBaseElement> {
@@ -17,11 +17,13 @@ interface Properties extends HTMLAttributes<HTMLBaseElement> {
 		}[];
 	};
 	heading?: ReactElement<HTMLHeadingElement>;
+	index?: boolean;
 }
 
 export function StandardPage({
 	meta,
 	heading,
+	index = true,
 	className,
 	children,
 	...otherProperties
@@ -48,6 +50,8 @@ export function StandardPage({
 						meta.other.map((item) => <meta name={item.name} content={item.content} />)}
 				</Fragment>
 			)}
+
+			{!index && <meta name='robots' content='noindex' />}
 
 			<Wrapper className={styles['wrapper']} fullWidth>
 				{heading && (
