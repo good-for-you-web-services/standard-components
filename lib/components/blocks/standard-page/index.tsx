@@ -47,7 +47,9 @@ export function StandardPage({
 					{meta.image && <meta property='og:image' content={meta.image} />}
 
 					{meta.other &&
-						meta.other.map((item) => <meta name={item.name} content={item.content} />)}
+						meta.other.map((item, index) => (
+							<meta name={item.name} content={item.content} key={`meta-${index}`} />
+						))}
 				</Fragment>
 			)}
 
