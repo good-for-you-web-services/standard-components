@@ -1,16 +1,11 @@
 import { ImgHTMLAttributes, type CSSProperties } from 'react';
+import type { ImageOptions } from '../../../types/image';
+import { getImageSrcFromOptions } from '../../../utilities/image';
 import styles from './style.module.scss';
 
 interface Properties extends ImgHTMLAttributes<HTMLImageElement> {
 	src: string;
-	options?: {
-		width?: number;
-		height?: number;
-		fit?: 'contain' | 'cover' | 'fill';
-		position?: 'top' | 'bottom' | 'left' | 'right' | 'center';
-		format?: 'avif' | 'jpg' | 'png' | 'webp' | 'gif' | 'blurhash';
-		quality?: number;
-	};
+	options?: ImageOptions;
 	aspect?: number | 'none';
 }
 
@@ -22,14 +17,7 @@ export function StandardImage({
 	loading = 'lazy',
 	...properties
 }: Properties) {
-	const { width, height, fit, position, format, quality = 90 } = options;
-	const imageURL =
-		`/.netlify/images/?url=${src}&q=${quality}` +
-		`${width ? `&w=${width}` : ''}` +
-		`${height ? `&h=${height}` : ''}` +
-		`${fit ? `&fit=${fit}` : ''}` +
-		`${position ? `&postition=${position}` : ''}` +
-		`${format ? `&fm=${format}` : ''}`;
+	const imageURL = getImageSrcFromOptions(src, options);
 
 	return (
 		<img
