@@ -4,4 +4,5 @@ export { StandardHeader } from './components/blocks/standard-header';
 export { StandardPage } from './components/blocks/standard-page';
 export { StandardSection } from './components/blocks/standard-section';
 
+// Element Exports
 export { StandardImage } from './components/elements/standard-image';
